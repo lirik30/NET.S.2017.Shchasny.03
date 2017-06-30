@@ -5,7 +5,7 @@ using static SomeAlgorithms.Algorithms;
 namespace SomeAlgorithms.Tests
 { 
     /// <summary>
-    /// This is a test class for Algorithms
+    /// This is a test class for Algorithms that using MSUnit
     /// </summary>
     [TestClass]
     public class AlgorithmsTests

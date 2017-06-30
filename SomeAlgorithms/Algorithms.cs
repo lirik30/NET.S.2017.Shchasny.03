@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Linq;
 
 namespace SomeAlgorithms
 {
     /// <summary>
-    /// Class with several algorithms that covered by unit tests
+    /// Static class with several algorithms that covered by unit tests
     /// </summary>
     public static class Algorithms
     {
         /// <summary>
-        /// Method that lets us to insert some bits of one number to second number
+        /// Static method that lets us to insert some bits of one number to second number
         /// </summary>
         /// <param name="inNumber">Number in which will be put into the second number</param>
         /// <param name="numberToInsert">Number which will be put into the first number</param>
@@ -31,6 +32,29 @@ namespace SomeAlgorithms
             inNumber |= numberToInsert;
             
             return inNumber;
+        }
+
+
+
+
+        public static int FindIndexOfEqualSums(int[] arr)
+        {
+            if(arr == null)
+                throw new ArgumentNullException();
+            if(arr.Length <= 0 || arr.Length >= 1000)
+                throw new ArgumentException();
+
+
+            for (int i = 1; i < arr.Length - 1; i++)
+            {
+                int leftSum = 0, rightSum = 0;
+                for (int j = 0; j < i; j++)
+                    leftSum += arr[j];
+                for (int j = i + 1; j < arr.Length; j++)
+                    rightSum += arr[j];
+                if (leftSum == rightSum) return i;
+            }
+            return -1;
         }
     }
 }

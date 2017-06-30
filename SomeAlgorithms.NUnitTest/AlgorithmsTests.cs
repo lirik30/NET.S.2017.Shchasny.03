@@ -4,9 +4,13 @@ using static SomeAlgorithms.Algorithms;
 
 namespace SomeAlgorithms.NUnitTest
 {
+    /// <summary>
+    /// This is a test class for Algorithms that using NUnit
+    /// </summary>
     [TestFixture]
     public class AlgorithmsTests
     {
+        #region InsertBitsTests
 
         /// <summary>
         /// This is a test method that must return positive result
@@ -60,6 +64,33 @@ namespace SomeAlgorithms.NUnitTest
         {
             Assert.Throws<ArgumentException>(() => InsertBits(inNumber, numberToInsert, from, to));
         }
+        #endregion
+
+        #region FindIndexOfEqualSums
+
+        [TestCase(new int[] { 1, 2, 3, 4, 3, 2, 1 }, ExpectedResult = 3)]
+        [TestCase(new int[] { 1, 100, 50, -51, 1, 1 }, ExpectedResult = 1)]
+        [TestCase(new int[] { 5, 4, 10, 13, 19, 20, -20}, ExpectedResult = 3)]
+        [TestCase(new int[] { 17, -7, 3, -3, 5, -5, 1, 16, -6}, ExpectedResult = 6)]
+        public int FindIndexOfEqualSums_PositiveTests(int[] arr)
+        { 
+            return FindIndexOfEqualSums(arr);
+        }
+
+        [TestCase(new int[0])]
+        //[TestCase(new int[1001])]
+        public void FindIndexOfEqualSums_ThrowsArgumentExceprtion(int[] arr)
+        {
+            Assert.Throws<ArgumentException>(() => FindIndexOfEqualSums(arr));
+        }
+
+        [TestCase(null)]
+        public void FindIndexOfEqualSums_ThrowsArgumentNullExceprtion(int[] arr)
+        {
+            Assert.Throws<ArgumentNullException>(() => FindIndexOfEqualSums(arr));
+        }
+
+        #endregion
     }
 
 
