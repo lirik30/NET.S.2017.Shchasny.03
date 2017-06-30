@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestCases>
+  <TestCase>
+    <inNumber>8</inNumber>
+    <numberToInsert>15</numberToInsert>
+    <from>7</from>
+    <to>5</to>
+  </TestCase>
+  <TestCase>
+    <inNumber>8</inNumber>
+    <numberToInsert>15</numberToInsert>
+    <from>1</from>
+    <to>0</to>
+  </TestCase>
+</TestCases>

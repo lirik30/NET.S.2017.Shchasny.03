@@ -62,7 +62,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TestVariants.xml">
+    <Content Include="PositiveTestVariants.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThrowsArgumentExceptionTestVariants.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThrowsArgumentOutOfRangeExceptionTestVariants.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

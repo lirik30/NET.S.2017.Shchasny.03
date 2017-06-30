@@ -18,15 +18,17 @@ namespace SomeAlgorithms
         /// <returns>Result of the insert</returns>
         public static int InsertBits(int inNumber, int numberToInsert, int from, int to)
         {
+            if (from < 0 || from >= 31 || to < 0 || to >= 31)
+                throw new ArgumentOutOfRangeException();
+            if (from > to)
+                throw new ArgumentException();
+
+
             numberToInsert <<= from;
-
             numberToInsert <<= 31 - to;
-
             numberToInsert >>= 1;
             numberToInsert &= ~Int32.MinValue;
-
             numberToInsert >>= 31 - to - 1;
-
             inNumber |= numberToInsert;
             
             return inNumber;

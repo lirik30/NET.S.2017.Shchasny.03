@@ -15,4 +15,6 @@ c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\Some
 c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.Tests\obj\Debug\SomeAlgorithms.Tests.csprojResolveAssemblyReference.cache
 c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.Tests\obj\Debug\SomeAlgorithms.Tests.dll
 c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.Tests\obj\Debug\SomeAlgorithms.Tests.pdb
-C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.Tests\bin\Debug\TestVariants.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.Tests\bin\Debug\PositiveTestVariants.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.Tests\bin\Debug\ThrowsArgumentExceptionTestVariants.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.Tests\bin\Debug\ThrowsArgumentOutOfRangeExceptionTestVariants.xml
