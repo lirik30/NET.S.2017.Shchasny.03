@@ -36,7 +36,11 @@ namespace SomeAlgorithms
 
 
 
-
+        /// <summary>
+        /// Static method which allows us to find the index of an element, which divides array into parts of the same sums
+        /// </summary>
+        /// <param name="arr">Array of integers</param> 
+        /// <returns></returns>
         public static int FindIndexOfEqualSums(int[] arr)
         {
             if(arr == null)

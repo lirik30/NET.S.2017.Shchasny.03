@@ -68,15 +68,28 @@ namespace SomeAlgorithms.NUnitTest
 
         #region FindIndexOfEqualSums
 
+        /// <summary>
+        /// This is a test method that must return positive result
+        /// </summary>
+        /// <param name="arr">Array of integers</param>
+        /// <returns></returns>
         [TestCase(new int[] { 1, 2, 3, 4, 3, 2, 1 }, ExpectedResult = 3)]
         [TestCase(new int[] { 1, 100, 50, -51, 1, 1 }, ExpectedResult = 1)]
         [TestCase(new int[] { 5, 4, 10, 13, 19, 20, -20}, ExpectedResult = 3)]
         [TestCase(new int[] { 17, -7, 3, -3, 5, -5, 1, 16, -6}, ExpectedResult = 6)]
+        [TestCase(new int[] { 1, 2, 3, 4, 5, 6, 7 }, ExpectedResult = -1)]
+        [TestCase(new int[] { 1, 3, 1}, ExpectedResult = 1)]
+        [TestCase(new int[] { 15 }, ExpectedResult = -1)]
+        [TestCase(new int[] { 20, 15 }, ExpectedResult = -1)]
         public int FindIndexOfEqualSums_PositiveTests(int[] arr)
         { 
             return FindIndexOfEqualSums(arr);
         }
 
+        /// <summary>
+        /// This is a test method that must throws ArgumentException
+        /// </summary>
+        /// <param name="arr">Array of the integers</param>
         [TestCase(new int[0])]
         //[TestCase(new int[1001])]
         public void FindIndexOfEqualSums_ThrowsArgumentExceprtion(int[] arr)
@@ -84,6 +97,10 @@ namespace SomeAlgorithms.NUnitTest
             Assert.Throws<ArgumentException>(() => FindIndexOfEqualSums(arr));
         }
 
+        /// <summary>
+        /// This is a test method that must throws ArgumentNullException
+        /// </summary>
+        /// <param name="arr">Array of integers</param>
         [TestCase(null)]
         public void FindIndexOfEqualSums_ThrowsArgumentNullExceprtion(int[] arr)
         {
