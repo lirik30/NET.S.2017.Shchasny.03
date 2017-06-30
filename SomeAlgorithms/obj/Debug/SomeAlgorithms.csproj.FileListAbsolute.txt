@@ -1,0 +1,5 @@
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms\bin\Debug\SomeAlgorithms.dll
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms\bin\Debug\SomeAlgorithms.pdb
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms\obj\Debug\SomeAlgorithms.csprojResolveAssemblyReference.cache
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms\obj\Debug\SomeAlgorithms.dll
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms\obj\Debug\SomeAlgorithms.pdb
