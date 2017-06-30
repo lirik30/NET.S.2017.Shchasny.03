@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
 
 namespace SomeAlgorithms
 {
     /// <summary>
-    /// Class with several algorithms that were covered by unit tests
+    /// Class with several algorithms that covered by unit tests
     /// </summary>
     public static class Algorithms
     {

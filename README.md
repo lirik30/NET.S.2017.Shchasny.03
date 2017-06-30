@@ -1,1 +1,1 @@
-Project with some method that covered by unit test(MSUnitTest)
+Project with some method that covered by unit tests(MSUnit(DDT) and NUnit tests)

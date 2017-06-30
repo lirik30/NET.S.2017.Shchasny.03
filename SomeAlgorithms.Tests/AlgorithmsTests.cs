@@ -5,9 +5,9 @@ using static SomeAlgorithms.Algorithms;
 namespace SomeAlgorithms.Tests
 { 
     /// <summary>
-    /// This is a test class for Algorithms and 
+    /// This is a test class for Algorithms
     /// </summary>
-    [TestClass()]
+    [TestClass]
     public class AlgorithmsTests
     {
         public TestContext TestContext { get; set; }

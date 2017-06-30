@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeAlgorithms", "SomeAlgor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeAlgorithms.Tests", "SomeAlgorithms.Tests\SomeAlgorithms.Tests.csproj", "{F3680A4C-D14F-4E98-A704-2936FC95D50A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeAlgorithms.NUnitTest", "SomeAlgorithms.NUnitTest\SomeAlgorithms.NUnitTest.csproj", "{F5FDD07C-CE0F-40D9-8328-5D34F78C0E05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F3680A4C-D14F-4E98-A704-2936FC95D50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3680A4C-D14F-4E98-A704-2936FC95D50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3680A4C-D14F-4E98-A704-2936FC95D50A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FDD07C-CE0F-40D9-8328-5D34F78C0E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FDD07C-CE0F-40D9-8328-5D34F78C0E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FDD07C-CE0F-40D9-8328-5D34F78C0E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FDD07C-CE0F-40D9-8328-5D34F78C0E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

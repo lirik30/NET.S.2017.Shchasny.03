@@ -1,0 +1,9 @@
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.NUnitTest\obj\Debug\SomeAlgorithms.NUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.NUnitTest\bin\Debug\SomeAlgorithms.NUnitTest.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.NUnitTest\bin\Debug\SomeAlgorithms.NUnitTest.pdb
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.NUnitTest\bin\Debug\nunit.framework.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.NUnitTest\bin\Debug\SomeAlgorithms.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.NUnitTest\bin\Debug\SomeAlgorithms.pdb
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.NUnitTest\bin\Debug\nunit.framework.xml
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.NUnitTest\obj\Debug\SomeAlgorithms.NUnitTest.dll
+C:\Users\Kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.03\SomeAlgorithms.NUnitTest\obj\Debug\SomeAlgorithms.NUnitTest.pdb
