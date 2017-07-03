@@ -66,13 +66,13 @@ namespace SomeAlgorithms.NUnitTest
         }
         #endregion
 
-        #region FindIndexOfEqualSums
+        #region FindIndexOfEqualSumsTests
 
         /// <summary>
         /// This is a test method that must return positive result
         /// </summary>
         /// <param name="arr">Array of integers</param>
-        /// <returns></returns>
+        /// <returns>Index of element that divides array into parts of the same sums</returns>
         [TestCase(new int[] { 1, 2, 3, 4, 3, 2, 1 }, ExpectedResult = 3)]
         [TestCase(new int[] { 1, 100, 50, -51, 1, 1 }, ExpectedResult = 1)]
         [TestCase(new int[] { 5, 4, 10, 13, 19, 20, -20}, ExpectedResult = 3)]
@@ -91,7 +91,6 @@ namespace SomeAlgorithms.NUnitTest
         /// </summary>
         /// <param name="arr">Array of the integers</param>
         [TestCase(new int[0])]
-        //[TestCase(new int[1001])]
         public void FindIndexOfEqualSums_ThrowsArgumentExceprtion(int[] arr)
         {
             Assert.Throws<ArgumentException>(() => FindIndexOfEqualSums(arr));
@@ -108,7 +107,31 @@ namespace SomeAlgorithms.NUnitTest
         }
 
         #endregion
+
+        #region NextBiggerNumberTests
+
+        /// <summary>
+        /// This is a test method that must return positive result
+        /// </summary>
+        /// <param name="num">Integer number</param>
+        /// <returns>The nearest bigger number for original number if exists, otherwise -1</returns>
+        [TestCase(12, ExpectedResult = 21)]
+        [TestCase(513, ExpectedResult = 531)]
+        [TestCase(2017, ExpectedResult = 2071)]
+        [TestCase(414, ExpectedResult = 441)]
+        [TestCase(144, ExpectedResult = 414)]
+        [TestCase(1234321, ExpectedResult = 1241233)]
+        [TestCase(1234126, ExpectedResult = 1234162)]
+        [TestCase(3456432, ExpectedResult = 3462345)]
+        [TestCase(10, ExpectedResult = -1)]
+        [TestCase(20, ExpectedResult = -1)]
+        [TestCase(987654321, ExpectedResult = -1)]
+        [TestCase(141414114, ExpectedResult = 141414141)]
+        [TestCase(861998, ExpectedResult = 868199)]
+        public int NextBiggerNumber_PositiveTests(int num)
+        {
+            return NextBiggerNumber(num);
+        }
+        #endregion
     }
-
-
 }
