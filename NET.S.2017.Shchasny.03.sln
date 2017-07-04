@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeAlgorithms.Tests", "Som
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeAlgorithms.NUnitTest", "SomeAlgorithms.NUnitTest\SomeAlgorithms.NUnitTest.csproj", "{F5FDD07C-CE0F-40D9-8328-5D34F78C0E05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{872A5896-BC0F-4C9E-B09A-51FAC7A3895A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{F5FDD07C-CE0F-40D9-8328-5D34F78C0E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5FDD07C-CE0F-40D9-8328-5D34F78C0E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5FDD07C-CE0F-40D9-8328-5D34F78C0E05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{872A5896-BC0F-4C9E-B09A-51FAC7A3895A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{872A5896-BC0F-4C9E-B09A-51FAC7A3895A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{872A5896-BC0F-4C9E-B09A-51FAC7A3895A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{872A5896-BC0F-4C9E-B09A-51FAC7A3895A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

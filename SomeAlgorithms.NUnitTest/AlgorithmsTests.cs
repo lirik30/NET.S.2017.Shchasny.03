@@ -128,10 +128,22 @@ namespace SomeAlgorithms.NUnitTest
         [TestCase(987654321, ExpectedResult = -1)]
         [TestCase(141414114, ExpectedResult = 141414141)]
         [TestCase(861998, ExpectedResult = 868199)]
+        [TestCase(0, ExpectedResult = -1)]
+        [TestCase(int.MaxValue, ExpectedResult = -1)]
         public int NextBiggerNumber_PositiveTests(int num)
         {
             return NextBiggerNumber(num);
         }
+
+        [TestCase(-15)]
+        [TestCase(-1000)]
+        [TestCase(int.MinValue)]
+        public void NextBiggerNumber_ThrowsArgumentException(int num)
+        {
+            Assert.Throws<ArgumentException>(() => NextBiggerNumber(num));
+        }
+
+
         #endregion
     }
 }

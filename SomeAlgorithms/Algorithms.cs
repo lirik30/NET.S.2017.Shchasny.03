@@ -73,6 +73,9 @@ namespace SomeAlgorithms
         /// <returns>Next bigger number if it exists. Otherwise -1 </returns>
         public static int NextBiggerNumber(int num)
         {
+            if (num < 0)
+                throw new ArgumentException();
+
             ArrayList num_digits = GetDigits(num);
 
             if (!IsGreatestExist(num_digits))
@@ -83,6 +86,8 @@ namespace SomeAlgorithms
             
             while (true)
             {
+                if ((long) num_copy + 1 > int.MaxValue)  
+                    return -1;
                 ArrayList num_copy_digits = GetDigits(++num_copy);
                 num_copy_digits.Sort();
 
