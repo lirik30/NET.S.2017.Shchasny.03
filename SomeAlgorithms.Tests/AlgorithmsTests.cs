@@ -4,17 +4,11 @@ using static SomeAlgorithms.Algorithms;
 
 namespace SomeAlgorithms.Tests
 { 
-    /// <summary>
-    /// This is a test class for Algorithms that using MSUnit
-    /// </summary>
     [TestClass]
     public class AlgorithmsTests
     {
         public TestContext TestContext { get; set; }
-
-        /// <summary>
-        /// This is a test method that must return positive result
-        /// </summary>
+        
         [DataSource(
             "Microsoft.VisualStudio.TestTools.DataSource.XML",
             "|DataDirectory|\\PositiveTestVariants.xml",
@@ -36,9 +30,6 @@ namespace SomeAlgorithms.Tests
         }
 
 
-        /// <summary>
-        /// This is a test method that must throws ArgumentOutOfRangeException
-        /// </summary>
         [DataSource(
             "Microsoft.VisualStudio.TestTools.DataSource.XML",
             "|DataDirectory|\\ThrowsArgumentOutOfRangeExceptionTestVariants.xml",
@@ -57,10 +48,7 @@ namespace SomeAlgorithms.Tests
             );
         }
 
-
-        /// <summary>
-        /// This is a test method that must throws ArgumentException
-        /// </summary>
+        
         [DataSource(
             "Microsoft.VisualStudio.TestTools.DataSource.XML",
             "|DataDirectory|\\ThrowsArgumentExceptionTestVariants.xml",

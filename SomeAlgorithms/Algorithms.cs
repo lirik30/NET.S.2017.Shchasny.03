@@ -51,7 +51,7 @@ namespace SomeAlgorithms
             if(arr == null)
                 throw new ArgumentNullException();
             if(arr.Length <= 0 || arr.Length >= 1000)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
 
 
             for (int i = 1; i < arr.Length - 1; i++)
@@ -76,7 +76,7 @@ namespace SomeAlgorithms
         public static int NextBiggerNumber(int num)
         {
             if (num < 0)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
 
             char[] num_digits = num.ToString().ToCharArray();
 
