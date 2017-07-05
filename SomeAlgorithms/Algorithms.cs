@@ -73,28 +73,39 @@ namespace SomeAlgorithms
         /// </summary>
         /// <param name="num">Original number(integer)</param>
         /// <returns>Next bigger number if it exists. Otherwise -1 </returns>
-        public static int NextBiggerNumber(int num)
+        public static int NextBiggerNumber(int num, out TimeSpan time)
         {
+            DateTime start = DateTime.Now;
             if (num < 0)
                 throw new ArgumentOutOfRangeException();
 
             char[] num_digits = num.ToString().ToCharArray();
 
             if (!IsGreatestExist(num_digits))
+            {
+                time = DateTime.Now - start;
                 return -1;
+            }
+                
 
             int num_copy = num;
             Array.Sort(num_digits);
             
             while (true)
             {
-                if ((long) num_copy + 1 > int.MaxValue)  
+                if ((long) num_copy + 1 > int.MaxValue)
+                {
+                    time = DateTime.Now - start;
                     return -1;
+                }
                 char[] num_copy_digits = (++num_copy).ToString().ToCharArray();
                 Array.Sort(num_copy_digits);
 
                 if (IsArrayEquals(num_digits, num_copy_digits))
+                {
+                    time = DateTime.Now - start;
                     return num_copy;
+                }
             }
         }
 

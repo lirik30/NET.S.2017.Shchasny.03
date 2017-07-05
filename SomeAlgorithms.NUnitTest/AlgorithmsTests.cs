@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using NUnit.Framework;
 using static SomeAlgorithms.Algorithms;
 
@@ -89,7 +90,10 @@ namespace SomeAlgorithms.NUnitTest
         [TestCase(int.MaxValue, ExpectedResult = -1)]
         public int NextBiggerNumber_PositiveTests(int num)
         {
-            return NextBiggerNumber(num);
+            TimeSpan time = TimeSpan.Zero;
+            int result = NextBiggerNumber(num, out time);
+            //Debug.WriteLine(time.TotalMilliseconds);
+            return result;
         }
 
         [TestCase(-15)]
@@ -97,7 +101,8 @@ namespace SomeAlgorithms.NUnitTest
         [TestCase(int.MinValue)]
         public void NextBiggerNumber_ThrowsArgumentOutOfRangeException(int num)
         {
-            Assert.Throws<ArgumentOutOfRangeException>(() => NextBiggerNumber(num));
+            TimeSpan time = TimeSpan.Zero;
+            Assert.Throws<ArgumentOutOfRangeException>(() => NextBiggerNumber(num, out time));
         }
 
 
