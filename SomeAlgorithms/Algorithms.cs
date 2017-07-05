@@ -23,14 +23,16 @@ namespace SomeAlgorithms
             if (from > to)
                 throw new ArgumentException();
 
+            int maxBitsnumber = 31;
+
             //Cut the bits on the right by shifting them to the right
             numberToInsert <<= from;
-            numberToInsert <<= 31 - to;
+            numberToInsert <<= maxBitsnumber - to;
             //Shifting them back to the left on position from-to
             //Taking into account the change of bits in the shift, invert the sign, if necessary
             numberToInsert >>= 1;
             numberToInsert &= ~Int32.MinValue;
-            numberToInsert >>= 31 - to - 1;
+            numberToInsert >>= maxBitsnumber - to - 1;
             //"Insert" numberToInsert into inNumber
             inNumber |= numberToInsert;
             
@@ -76,20 +78,20 @@ namespace SomeAlgorithms
             if (num < 0)
                 throw new ArgumentException();
 
-            ArrayList num_digits = GetDigits(num);
+            char[] num_digits = num.ToString().ToCharArray();
 
             if (!IsGreatestExist(num_digits))
                 return -1;
 
             int num_copy = num;
-            num_digits.Sort();
+            Array.Sort(num_digits);
             
             while (true)
             {
                 if ((long) num_copy + 1 > int.MaxValue)  
                     return -1;
-                ArrayList num_copy_digits = GetDigits(++num_copy);
-                num_copy_digits.Sort();
+                char[] num_copy_digits = (++num_copy).ToString().ToCharArray();
+                Array.Sort(num_copy_digits);
 
                 if (IsArrayEquals(num_digits, num_copy_digits))
                     return num_copy;
@@ -103,34 +105,16 @@ namespace SomeAlgorithms
         /// <param name="first">First array of integers</param>
         /// <param name="second">Second array of integers</param>
         /// <returns>True if arrays are the same</returns>
-        private static bool IsArrayEquals(ArrayList first, ArrayList second)
+        private static bool IsArrayEquals(char[] first, char[] second)
         {
             if (first == null || second == null)
                 throw new ArgumentNullException();
-            if (first.Count != second.Count)
+            if (first.Length != second.Length)
                 return false;
-            for (int i = 0; i < first.Count; i++)
+            for (int i = 0; i < first.Length; i++)
                 if (!first[i].Equals(second[i]))
                     return false;
             return true;
-
-        }
-
-        /// <summary>
-        /// Method converts integer number in the ArrayList of digits of this number
-        /// </summary>
-        /// <param name="num">Integer number</param>
-        /// <returns>ArrayList of integer digit of this number</returns>
-        private static ArrayList GetDigits(int num)
-        {
-            ArrayList digits = new ArrayList();
-            while(num >= 1)
-            {
-                digits.Add(num % 10);
-                num /= 10;
-            }
-            digits.Reverse();
-            return digits;
         }
 
         /// <summary>
@@ -138,11 +122,12 @@ namespace SomeAlgorithms
         /// </summary>
         /// <param name="digits">ArrayList of digits of original number</param>
         /// <returns>True if greatest number, that consists of digits of original number, exists. Otherwise false</returns>
-        private static bool IsGreatestExist(ArrayList digits)
+        private static bool IsGreatestExist(char[] digits)
         {
-            ArrayList copy_digits = new ArrayList(digits);
-            copy_digits.Sort();
-            copy_digits.Reverse();
+            char[] copy_digits = new char[digits.Length];
+            digits.CopyTo(copy_digits, 0);
+            Array.Sort(copy_digits);
+            Array.Reverse(copy_digits);
             return !IsArrayEquals(copy_digits, digits);
         }
         #endregion
